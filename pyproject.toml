@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skelex"
+version = "0.1.0"
+description = "Skeleton extraction from images and videos: human pose (MediaPipe) and morphological skeletonization (scikit-image)"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "opencv-python-headless",
+    "scikit-image",
+    "scipy",
+    "mediapipe>=0.10.14",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+skelex = "skelex.cli:main"
+
+[tool.setuptools]
+packages = ["skelex"]
