@@ -37,7 +37,7 @@ def collect_inputs(inputs: list[str]) -> list[tuple[Path, str]]:
                 raise ValueError(f"Unsupported file type: {p}")
             found.append((p, k))
         else:
-            raise FileNotFoundError(p)
+            raise FileNotFoundError(f"File not found: {p.resolve()} (current folder: {Path.cwd()})")
     return found
 
 

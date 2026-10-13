@@ -10,10 +10,9 @@ readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
     "numpy",
-    "opencv-python-headless",
     "scikit-image",
     "scipy",
-    "mediapipe>=0.10.14",
+    "mediapipe>=0.10.14",  # also provides OpenCV (opencv-contrib-python)
 ]
 
 [project.optional-dependencies]
